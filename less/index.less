@@ -1,0 +1,181 @@
+@import "base.less";
+
+@main-color:#de181b;
+body{
+    background-color: #666;
+}
+
+
+/*slide轮播图部分样式*/
+#slide{
+    .swiper-slide{
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .swiper-pagination-bullet{
+        opacity:1;
+        background-color: transparent;
+        border:0.01rem solid #fff;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: #fff;
+    }
+}
+
+/*nav部分样式代码*/
+#nav{
+    padding: 0.1rem;
+    >ul{
+        display: flex;
+        flex-wrap: wrap;
+        >li{
+            width: 25%;
+            >a{
+                display: block;
+                text-align: center;
+                margin: 0.05rem 0;
+                >img{
+                    width: 0.4rem;
+                    height: 0.4rem;
+                }
+                >p{
+                    font-size: 0.14rem;
+                }
+            }
+        }
+    }
+}
+/*主体部分样式*/
+#main{
+    padding: 0.1rem;
+    background-color: #eee;
+    padding-bottom: 0.6rem;
+}
+/*seckill秒杀部分样式*/
+#seckill{
+    border: 0.01rem solid #ccc;
+    background-color: #fff;
+    .seckill-title{
+        height: 0.3rem;
+        line-height: 0.3rem;
+        .seckill-icon{
+            width: 0.2rem;
+            height: 0.25rem;
+            float: left;
+            margin-left: 0.05rem;
+        }
+        .seckill-name{
+            font-size: 0.14rem;
+            color: @main-color;
+            float: left;
+            margin-left: 0.05rem;
+        }
+        .seckill-time{
+            float: left;
+            margin-left: 0.05rem;
+            span{
+                width: 0.15rem;
+                height: 0.15rem;
+                background-color: #000;
+                text-align: center;
+                line-height: 0.15rem;
+                display: inline-block;
+                color: #fff;
+                &:nth-child(3n) {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+        .seckill-more{
+            float: right;
+            font-size: 0.14rem;
+            margin-right: 0.05rem;
+        }
+    }
+    .seckill-content{
+        >ul{
+            display: flex;
+            >li{
+                flex: 1;
+                border-right: 0.01rem solid #ccc;
+                &:last-of-type {
+                    border-right: none;
+                }
+                >a{
+                    display: block;
+                    text-align: center;
+                    >img{
+                        width: 1.1rem;
+                    }
+                    p{
+                        font-size: 0.12rem;
+                        text-align: center;
+                        line-height: 0.2rem;
+                        &:first-of-type{
+                            span{
+                                color:@main-color;
+                            }
+                        }
+                        &:last-of-type {
+                            del {
+                                color: #ccc;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*jd-market部分样式*/
+.jd-market{
+    border: 0.01rem solid #ccc;
+    background-color: #fff;
+    margin-top: 0.1rem;
+    .jd-market-title{
+        border-bottom: 0.01rem solid #ccc;
+        >h4{
+            height: 0.3rem;
+            line-height: 0.3rem;
+            padding-left: 0.3rem;
+            font-weight: normal;
+            position: relative;
+            &::before{
+                content: '';
+                width: 0.04rem;
+                height: 0.15rem;
+                background-color: @main-color;
+                position: absolute;
+                left:0.2rem;
+                top:0.07rem;
+            }
+        }
+    }
+    .jd-market-content{
+        display: flex;
+        .left{
+            flex: 1;
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .right{
+            flex: 1;
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
